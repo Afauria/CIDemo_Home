@@ -55,8 +55,7 @@ public class BottomNavigationActivity extends BaseActivity {
     private void initViewPager() {
         mFragments = ViewManager.getInstance().getAllFragment();//这几个Fragment是主动添加到ViewManager中的
         BaseFragment newsFragment = getNewsFragment();//主动寻找
-//去掉一个页面
-//        mFragments.add(newsFragment);
+        mFragments.add(newsFragment);
         mPager = (NoScrollViewPager) findViewById(R.id.container_pager);
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), mFragments);
         mPager.setPagerEnabled(false);
